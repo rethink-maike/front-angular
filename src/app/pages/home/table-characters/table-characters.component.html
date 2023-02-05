@@ -1,0 +1,35 @@
+<mat-table [dataSource]="dataSource">
+  <!-- Characters Column -->
+  <ng-container matColumnDef="characters">
+    <mat-header-cell *matHeaderCellDef> Personagens </mat-header-cell>
+    <mat-cell *matCellDef="let row" data-label="characters">
+      <img src="{{row.thumbnail}}" class="logo-characters" alt="logo" />
+      <strong> {{row.name}} </strong>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Series Column -->
+  <ng-container matColumnDef="series">
+    <mat-header-cell class="mobile-header" *matHeaderCellDef> Series </mat-header-cell>
+    <mat-cell class="mobile-cell" *matCellDef="let row" data-label="series">
+      <ng-container *ngFor="let serie of row.seriesFormat">
+        <span> {{ serie }} </span>
+      </ng-container>
+    </mat-cell>
+  </ng-container>
+
+  <!-- Events Column -->
+  <ng-container class="mobile" matColumnDef="events">
+    <mat-header-cell class="mobile-header" *matHeaderCellDef> Eventos</mat-header-cell>
+    <mat-cell class="mobile-cell" *matCellDef="let row" data-label="events">
+      <ng-container *ngFor="let event of row.eventsFormat">
+        <span> {{ event }} </span>
+      </ng-container> </mat-cell>
+  </ng-container>
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row (click)="openModalDetails(row)" *matRowDef="let row; columns: displayedColumns;">
+  </mat-row>
+
+</mat-table>

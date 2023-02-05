@@ -1,0 +1,42 @@
+@import "../../../../app/style/app.scss";
+
+.logo-characters {
+  width: 60px;
+  margin: 0 30px 0 0;
+  border-radius: $border_radius_default;
+}
+
+.mat-table {
+  overflow: auto;
+  max-height: 100%;
+
+  mat-header-cell {
+    background-color: $background-color-secondary;
+  }
+
+  mat-row {
+    cursor: pointer;
+    height: auto;
+    padding: 15px;
+    border-bottom-width: 15px;
+  }
+
+  mat-cell {
+    padding: 6px 6px 6px 0px;
+    border-radius: $border_radius_default;
+  }
+
+  .mobile-cell {
+    display: grid;
+  }
+}
+
+
+
+@media(max-width: 600px) {
+
+  .mobile-header,
+  .mobile-cell {
+    display: none !important;
+  }
+}

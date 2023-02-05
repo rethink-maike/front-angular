@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="container__header">
+    <h1> Lista de Séries </h1>
+  </div>
+
+  <div class="container__series">
+    <ng-container *ngIf="dataSeries && dataSeries.length !== 0; else elseTemplate">
+      <ng-container *ngFor="let serie of dataSeries">
+        <div class="item">
+          <span class="item__img">
+            <img [src]=getSantizeUrl(serie.path) alt="{{ serie.name }}">
+          </span>
+          <span class="item__name"><strong>{{ serie.name }}</strong></span>
+        </div>
+      </ng-container>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <h2> Nenhuma Série </h2>
+    </ng-template>
+  </div>
+
+</div>
