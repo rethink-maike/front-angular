@@ -4,7 +4,7 @@ import { tap, map } from 'rxjs/operators';
 import { SnackBarService } from './../../core/services/snackbar.service';
 import { IComics, IResponse, IResponseData } from './../../core/interfaces/comics.interface';
 import { AppConfig } from 'src/app/core/helpers/app.config';
-import { HttpClient, HttpParams } from '@angular/common';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { MarvelService } from './../../core/services/marvel.service';
 
 @Injectable({
