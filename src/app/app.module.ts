@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS } from '@angular/common';
 import { SpinnerInterceptorService } from './core/services/spinner-interceptor.service';
 import { HomeModule } from './pages/home/home.module';
 import { NgxSpinnerModule } from 'ngx-spinner';
